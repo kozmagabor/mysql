@@ -133,7 +133,7 @@ pipeline:
     image: banzaicloud/ci-pipeline-client:0.11
     action: EnsureDeployment
     deployment:
-      name: './mysql-operator-0.1.14.tgz'
+      name: './mysql-operator-0.2.9.tgz'
       releaseName: mysql-operator
       reuseValues: true
       namespace: pipeline-system

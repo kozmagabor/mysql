@@ -98,7 +98,7 @@ spec:
               name: {{ default (printf "%s-phpmyadmin" (include "mysql-spotguide.fullname" .)) .Values.phpmyadmin.existingSecret }}
               key: username
         args:
-        - GRANT ALL PRIVILEGES ON phpmyadmin.* TO '{{ `{{ .PMA_CONTROLUSER }}` }}'@'%';
+        - GRANT ALL PRIVILEGES ON 'phpmyadmin'.'*' TO '{{ `{{ .PMA_CONTROLUSER }}` }}'@'%';
 
 ---
 apiVersion: batch/v1

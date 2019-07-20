@@ -41,7 +41,7 @@ spec:
         - name: CUSTOM_DATABASE
           value: {{ .Values.mysql.database }}
         args:
-        - CREATE DATABASE IF NOT EXISTS {{ `{{ .CUSTOM_DATABASE }}` }};
+        - CREATE DATABASE IF NOT EXISTS '{{ `{{ .CUSTOM_DATABASE }}` }}';
 ---
 apiVersion: batch/v1
 kind: Job
